@@ -203,3 +203,16 @@ for (let num of arrayNum) {
 }
 console.log(`Your even numbers are: ${evensOnly}`);
 
+//  functions
+
+add(2, 2);
+add(add(2, 2),3);
+
+// def add(num1, num2):
+//      sum= num1 + num2
+//      return sum
+
+function add(num1, num2) {
+    const sum = num1 + num2;
+    return sum;
+}
