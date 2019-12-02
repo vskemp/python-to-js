@@ -62,3 +62,49 @@ console.log(aboutMyPet);
 
 petName = "Toby";
 console.log(aboutMyPet);
+
+// Stuff we'll do with collections C.R.U.D.
+// Create
+const turkeyDinner = ["sausage balls", "turkey", "dressing", "pecan pie"]
+// How do I copy a list?
+// Retrieve
+// print(turkeyDinner[2])
+console.log(turkeyDinner[2]);
+// How do I retrive a portion? ("slice" in python)
+// How do I retrieve based on a condition?
+// How do I transform each time and put that 
+
+// Update
+// turkeyDinner[1] = "Tofurkey"
+turkeyDinner[1] = "Tofurkey";
+
+// Delete
+// In python:
+// turkeyDinner.pop(1)
+// del turkeyDinner[1]
+// .......
+// You can do this in JavaScript:
+// delete turkeyDinner[1];
+// But! This leaves a hole!
+// Instead you can splice
+turkeyDinner.splice(1, 1)
+
+// in python, we do this:
+// for item in turkeyDinner:
+//      print(f"For turkey day, I ate {item}")
+//
+// In JavaScript:
+// 1. "the classic" for-loop (is the equivalent of the python while-loopo)
+// BTW the equivalent of count += 1 is count ++
+for (let count = 0; count < turkeyDinner.length; count++) {
+    // console.log(count);
+    console.log('I ate ${turkeyDinner[count]}');
+}
+
+// 2. "new-fangled" for-loop
+let itemCount  = 0; //if you REALLY need the index
+for (let item of turkeyDinner) {
+    console.log('I ate ${item}');
+    itemCount ++;
+}
+// 3. (for tomorrow) .forEach and friends
