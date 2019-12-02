@@ -35,17 +35,17 @@ console.log("Hello World!");
 console.log(turkeysCooked);
 
 // print(f"I ate {turkeyCooked} turkeys!')
-console.log('I ate ${turkeysCooked} turkeys!');
-// You have to use '' to run an f string function in js. 
-// It's good practice to use '' through out even when it doesn't matter
+console.log(`I ate ${turkeysCooked} turkeys!`);
+// You have to use `` to run an f string function in js. 
+// It's good practice to use `` through out even when it doesn't matter
 // You can use backtick-strings for interpolation.
 // - Template Strings
 // - Templpate Literals
 
 // print(f"How many turkeys  I should eat {numberOfTurkeysICanEat - turkeysCooked})
-console.log('Turkeys to eat: ${numberOfTurkeysICanEat - turkeysCooked}');
+console.log(`Turkeys to eat: ${numberOfTurkeysICanEat - turkeysCooked}`);
 
-const petName = 'Sally';
+const petName = `Sally`;
 // petName.toUpperCase();
 // When do I do upper-casing in
 // HTML vs CSS vs JavaScript?
@@ -98,13 +98,86 @@ turkeyDinner.splice(1, 1)
 // BTW the equivalent of count += 1 is count ++
 for (let count = 0; count < turkeyDinner.length; count++) {
     // console.log(count);
-    console.log('I ate ${turkeyDinner[count]}');
+    console.log(`I ate ${turkeyDinner[count]}`);
 }
 
 // 2. "new-fangled" for-loop
 let itemCount  = 0; //if you REALLY need the index
 for (let item of turkeyDinner) {
-    console.log('I ate ${item}');
+    console.log(`I ate ${item}`);
     itemCount ++;
 }
 // 3. (for tomorrow) .forEach and friends
+
+
+
+// converting numbers to/from Strings
+// a_num = "5"
+// no_really_a_number = int(a_num)
+const aNum = "5";
+// const reallyANUMBER = Number(aNum);
+const reallyANumber = parseInt(aNum, 10);
+
+const reallyAFloat = parseFloat("3.14");
+
+// the _original_string = str(no_really_a_number)
+const theStringFive = String(reallyANumber);
+const theString314 = String(reallyAFloat);
+
+// Comparison
+
+// In python, this is False:
+// "5" == 5
+
+// In JavaScript, the == operator AUTOMATICALLY converts types
+// In JavaScript, use the "threequal"
+"5" === 5
+// '==' is the strict equality operator
+// it does a double comparison.
+// 1. it compares the types
+// 2. then, it compares the values
+
+// These are the samein python and in javascript
+5 < 6 // true
+6 < 6 // false
+6 <= 6 // true
+
+// The following is not a thing in JS:
+// "7" >== 7....you get an error
+
+// and/or equivalents
+const petAge = 5;
+
+// python
+// petAge < 10 and petAge >2
+
+// JavaScript
+petAge < 10 && petAge > 2
+// or = "||"
+petAge < 10 || petAge > 2
+
+// Too Much!
+// petAge < 10 && petAge > 2 || petAge === 5
+const isYoungEnough = petAge < 10;
+const isOldEnough = petAge > 2;
+const isJustRight = petAge === 5
+
+// if/else
+if (isYoungEnough && isOldEnough) {
+    if (isJustRight) {
+        console.log(`You are exactly the right age`);
+    } else if(isMoreJustRight) {
+    } else {
+        console.log(`You're cool anyway.`)
+    }
+}
+
+// 1. Create an array
+// 2. loop through the array
+// 3. Print out only the even numbers
+
+// num = 8123456
+// (num % 2) == 0
+// JS:
+// const num = 8123456;
+// (num % 2) === 0;
