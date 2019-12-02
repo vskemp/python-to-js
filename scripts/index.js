@@ -60,9 +60,6 @@ console.log(`${petName.toUpperCase()} is ${petName.length} characters long.`);
 const aboutMyPet = `${petName.toUpperCase()} is ${petName.length} characters long.`;
 console.log(aboutMyPet);
 
-petName = "Toby";
-console.log(aboutMyPet);
-
 // Stuff we'll do with collections C.R.U.D.
 // Create
 const turkeyDinner = ["sausage balls", "turkey", "dressing", "pecan pie"]
@@ -181,3 +178,28 @@ if (isYoungEnough && isOldEnough) {
 // JS:
 // const num = 8123456;
 // (num % 2) === 0;
+
+const arrayNum = [2, 5, 6, 8, 9, 4, 1];
+// The "in" keyword would give you the indexes.
+// For othe rkinds of collections, the 'in' keyword
+// can give you "metadata"
+for (let num of arrayNum) {
+    if (num % 2 === 0) {
+    console.log(`Your even numbers are: ${num}`);
+    }
+}
+
+// I want the even numbers in their own array.
+// - where are the numbers now?
+// - where do I want to put them?
+let evensOnly = [];
+// - How do I put them in the new array?
+
+for (let num of arrayNum) {
+    if (num % 2 === 0) {
+        // in python, it's evensOnly.append()
+        evensOnly.push(num);
+    }
+}
+console.log(`Your even numbers are: ${evensOnly}`);
+
